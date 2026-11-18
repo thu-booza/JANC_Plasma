@@ -1,0 +1,10 @@
+# Numerical baseline. Ancillary packages are frozen after server resolution.
+# Candidate for V100 SM7.0. Validate on the actual server before production.
+jax[cuda12]==0.11.1
+numpy==2.4.6
+cantera==3.2.0
+scipy
+matplotlib
+h5py
+pyyaml
+tqdm

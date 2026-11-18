@@ -1,0 +1,70 @@
+{
+  "kind": "h5_closed_long_run_v1",
+  "config": {
+    "nx": 6144,
+    "ny": 512,
+    "lx": 0.06,
+    "ly": 0.005,
+    "levels": 2,
+    "patch_x": 32,
+    "patch_y": 32,
+    "capacities": [
+      769,
+      2049
+    ],
+    "block_batch": 4,
+    "chem_cells": 4096,
+    "cfl": 0.15,
+    "dt_max": 4e-10,
+    "p0": 101325.0,
+    "t0": 300.0,
+    "phi": 1.0,
+    "amr_every": 8,
+    "buffer": 4
+  },
+  "physics": {
+    "mole_ratio": "H2:2,O2:1,N2:1.5",
+    "hot_length_m": 0.003,
+    "hot_T_K": 3000.0,
+    "hot_p_Pa": 4000000.0,
+    "hot_u_m_s": 0.0,
+    "hotspot_radius_m": 0.00025,
+    "hotspot_y_fractions": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "tube_width_m": 0.005,
+    "hotspot_assumption": "Same 3000K/4MPa state as slab; all gas initially at rest.",
+    "mesh_note": "Cartesian uniform base 9.765625um; two block-AMR levels 4.8828125/2.44140625um. No wall stretching.",
+    "left_boundary": "fixed_stationary_impermeable_wall_velocity_odd_ghost",
+    "wall_model_note": "Zero face u,v via antisymmetric momentum ghosts. Inviscid Euler flux only; no viscous wall shear or heat conduction."
+  },
+  "run": {
+    "target_t_s": null,
+    "session_wall_s": 0.0,
+    "save_every_s": 600.0,
+    "diagnostic_every_s": 2.5e-07,
+    "picture_every_s": 1e-06,
+    "front_check_every": 8,
+    "shift_trigger_m": 0.011,
+    "shift_cells": 320,
+    "minimum_tail_m": 0.006,
+    "ahead_margin_m": 0.0015,
+    "budget_limit": 1e-07,
+    "statistics_window_s": 2e-06,
+    "statistics_skip_until_s": 5e-06,
+    "window_translation": false,
+    "stop_front_m": 0.055,
+    "statistics_confirmation_s": 2e-06,
+    "completion": "three_contiguous_windows_then_confirmation; statistical_only",
+    "domain_growth_cells": 3072
+  },
+  "amr": {
+    "protect_behind_m": 0.00045,
+    "protect_ahead_m": 0.00015,
+    "band_note": "Local leading crossing per y, extended beyond gradients for reaction-zone protection; independent of block indices.",
+    "composition_repair_max_mass_fraction": 1e-06,
+    "repair_note": "Tiny negative species corrected locally while preserving H/O/N mass; larger changes reject the candidate step."
+  }
+}

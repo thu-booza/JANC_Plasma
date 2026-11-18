@@ -1,0 +1,10 @@
+{
+  "source_run": "20261114T085921Z_b1fb7662",
+  "checkpoint_sha256": "73375b419abc6fae0cc77d85a3e362716255f372de4847cd675cab9fc5ebf5ca",
+  "runtime_sha256": "fc32b8e28d4f4a0578b01960ced6fde6806c211cf2bc5d4276739e4a14d646ae",
+  "source_step": 10129,
+  "source_t_s": 2.9965873265577397e-06,
+  "prior_reported_step": 12402,
+  "prior_reported_t_s": 3.5007468131970094e-06,
+  "minimum_wall_s": 24151.528549237
+}

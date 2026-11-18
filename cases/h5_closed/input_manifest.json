@@ -1,0 +1,11 @@
+{
+  "available_restart": {
+    "step": 12620,
+    "t_s": 3.5499999999999995e-06,
+    "checkpoint_sha256": "f17a796319d806086e5ce6259ed7e7bff96ac77da66a0319c26613ec7eaacce7",
+    "archive_name": "JANC_H5_3p55us_restart_only.zip",
+    "archive_sha256": "d524939a23a7b233c4533f6a8efdec97abfe0c8f21bd5a4f6e5705d056d9aea5",
+    "data_in_git": false
+  },
+  "mechanism_sha256": "d9210839032baa2a8accb8dd44730df920ae72ce4df3946a787a2e53371130b2"
+}
